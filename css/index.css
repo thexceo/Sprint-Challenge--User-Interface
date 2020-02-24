@@ -71,6 +71,37 @@ p {
     margin: 0 auto;
 }
 
+header {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+
+header .logo {
+    width: 157px;
+    height: 40px;
+    background: black;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+header nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.jumbotron {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -126,6 +157,55 @@ p {
     padding-right: 0;
 }
 
+.about-page .about-top {
+ display: flex;
+}
+
+.about-page .about-text {
+  width: 350px;
+}
+.about-page .about-intro {
+  padding: 0 20px 20px;
+  border-bottom: 1px dashed black;
+}
+
+.about-page .about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-page .about-content .about-box {
+  width: 370px;
+  margin: 30px 15px;
+  border-bottom: 1px dashed black;
+
+}
+
+.about-page .about-content .about-box h2 {
+  margin-top: 10px;
+}
+
+.about-page .about-content .about-box .about-btn {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 130px;
+  text-align: center;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.about-page .about-content .about-box .about-btn:hover {
+  background: black;
+  color: white;
+}
+
+
+.about-page .about-footer-content {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
 footer {
     width: 100%;
     background: black;
@@ -143,4 +223,172 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+} 
+
+body {
+	max-width: 960px;
+	margin:auto;
+	
+}
+
+/* box colors*/
+
+#box1 {
+  background: teal;
+}
+
+#box2 {
+  background: gold;
+}
+
+#box3 {
+  background: cadetblue;
+}
+
+#box4 {
+  background: coral;
+}
+
+#box5 {
+  background: crimson;
+}
+
+#box6 {
+  background: forestgreen;
+}
+#box7 {
+  background: darkorchid;
+}
+
+#box8 {
+  background: hotpink;
+}
+
+#box9 {
+  background: indigo;
+}
+
+#box10 {
+  background: dodgerblue;
+}
+
+.jumboImg {
+    /*border:1px solid black;*/
+    display: flex;
+    margin: 20px 0px 35px 0px;
+    justify-content: center;
+
+}
+
+/*about exclusive css*/
+.aboutSect {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.content1, .content2 {
+    display: flex;
+    margin: 20px 10px 25px 10px;
+}
+
+button {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.chartBottom {
+    border-bottom: 1px dotted black ;
+    padding-bottom: 10px;
+    margin: 20px;
+}
+
+
+
+
+*, 
+*:before, 
+*:after {
+   @include box-sizing(border-box); 
+}
+
+html, body {
+  background: #f1f1f1;
+  font-family: 'Merriweather', sans-serif;
+  padding: 1em;
+}
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   @include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 126px;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
 }
